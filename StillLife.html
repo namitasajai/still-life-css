@@ -1,28 +1,30 @@
 <!DOCTYPE html> 
 <head> 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
 <style> 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Teko);
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Teko&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Poppins&display=swap);
 #wrapper {
   position: relative;
   width: 1000px;
   height: 600px;
-  background-color: lightgray;
+  background-color: rgb(138, 168, 224);
   overflow: hidden;
 }
 
 #mainbag {
   width: 900px;
-  height: 700px;
-  background: rgb(69, 63, 63);
+  height: 800px;
+  background: rgb(239, 176, 176);
   transform: rotate(-60deg);
   position: absolute; 
   top: -80px; 
   left: 200px;
   border-radius: 10px;
-  background-image: radial-gradient(rgb(202, 178, 139) 40%, transparent 40%);
+  background-image: radial-gradient(rgb(119, 90, 43) 40%, transparent 40%);
   background-size: 20px 20px;
 }
 
@@ -38,6 +40,16 @@
   border-radius: 50%;
   border: 1px solid rgba(158, 149, 149, 0.649); 
   background-image: radial-gradient(transparent 20%, rgba(158, 149, 149, 0.649) 21%, rgb(206, 203, 203) 21%, rgba(158, 149, 149, 0.649) 26%, rgb(206, 203, 203) 26%);
+  background-size: 100%; 
+  position: absolute; 
+}
+
+#cdoverlay {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(158, 149, 149, 0.649); 
+  background-image: conic-gradient(from 36deg, rgba(158, 149, 149, 0.649), rgb(183, 239, 137), rgba(158, 149, 149, 0.649), rgb(231, 138, 232), rgba(158, 149, 149, 0.649), rgb(103,234, 209), rgba(158, 149, 149, 0.649));
   background-size: 100%; 
   position: absolute; 
 }
@@ -180,14 +192,45 @@
   top: 30px;
   left: 15px; 
 }
-
+#greenbook {
+  width: 320px; 
+  height: 350px; 
+  border-left:9px solid rgb(22, 65, 30);
+  background-color:rgb(35, 95, 45);
+  position: absolute; 
+  top: 125px; 
+  right: 50px; 
+  transform: rotate(-50deg);
+}
+#greenbook #whitetitle {
+  font-family: "Libre Baskerville", 'Times New Roman', Times, serif; 
+  text-align: left;
+  width: 220px; 
+  height: 200px; 
+  line-height: 50px; 
+  font-size: 36px; 
+  position: absolute; 
+  top: 80px; 
+  left: 40px; 
+  color: rgba(255, 255, 255, 0.992); 
+}
 #whitebook {
   width: 220px; 
   height: 350px; 
+  border-left: 10px solid rgb(192, 176, 151); 
+  border-top: 3px solid rgb(219, 204, 180);
   background-color:rgb(255, 244, 227);
   position: absolute; 
-  top: 10px; 
-  left: 10px; 
+  top: 125px; 
+  right: -5px; 
+  transform: rotate(-30deg); 
+}
+#bookid {
+  font-size: 6pt; 
+  font-family: 'Arial Narrow', sans-serif; 
+  font-style: bold; 
+  text-align: right; 
+  margin: 9px; 
 }
 #redtext {
   width: 200px; 
@@ -212,7 +255,6 @@
   color:rgb(54, 51, 51);
   font-style: bold;
 }
-
 #author {
   width: 200px; 
   height: 40px; 
@@ -229,8 +271,66 @@
   border-radius: 50%;
   background-color: rgb(141, 149, 210);
   position: absolute; 
-  top: 140px;
-  left: 30px; 
+  top: 150px;
+  left: 35px; 
+}
+#goldcircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(233, 183, 76);
+  position: absolute; 
+  top: 150px;
+  right: 35px; 
+}
+#line1 {
+  width: 1.5px; 
+  height: 189px; 
+  background-color: rgb(54, 51, 51, 0.9);
+  top: 128px; 
+  left: 108px; 
+  transform: rotate(-47deg);
+  position: absolute;
+}
+#line2 {
+  width: 1.5px; 
+  height: 150px; 
+  background-color: rgba(54, 51, 51, 0.9);
+  top: 147px; 
+  left: 109px; 
+  transform: rotate(90deg);
+  position: absolute;
+}
+#yellowcards {
+  width: 160px; 
+  height: 220px; 
+  top: -110px; 
+  right: 200px; 
+  position: absolute; 
+  border-top: 5px solid rgb(180, 175, 86);
+  border-left: 2px solid rgb(200, 194, 86);
+  transform: rotate(-110deg);
+  background-color: rgb(246, 239, 103);
+}
+#tacocat {
+  font-family: "Poppins", Helvetica, Sans-serif; 
+  letter-spacing: 2px;
+  margin: 15px; 
+  line-height: 18px;
+  font-style: bold;  
+}
+#cardbar1 {
+  left: 18px; 
+  top: 140px; 
+}
+#cardbar2 {
+  left: 36px; 
+  top: 120px; 
+  height: 100px; 
+}
+#cardbar3 {
+  left: 55px;  
+  top: 140px; 
 }
 </style>
 </head>
@@ -240,7 +340,9 @@
           <div id="band"> 
           </div>
         </div>
-        <div id="cd"> </div>
+        <div id="cd"> 
+          <div id="cdoverlay"></div>
+        </div>
         <div id="porkroll"> 
           <div id="circle"> </div>
           <div id="title">
@@ -261,21 +363,30 @@
           <div id="bar3" class="bar"></div>
           <div id="bar4" class="bar"></div> 
         </div>
-        <div id="greenbook"> </div>
+        <div id="greenbook"> 
+          <div style="position: absolute; top: 20px; left:20px; font-family: 'Libre Barcode 128 Text', Helvetica; font-size: 20px; color: white;">19745-0</div>
+          <div id="whitetitle">Ainsworth <br> Keyboard <br> Trainer</div>
+        </div>
         <div id="whitebook"> 
+          <div id="bookid">B-186-Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1.45</div> 
           <div id="redtext">THE GREAT BESTSELLER</div>
           <div id="titletext">GAMES PEOPLE PLAY</div>
           <div id="author">BY ERIC BERNE, M.D.</div>
           <div id="bluecircle"></div>
-          <div id="bluecircle"></div>
-          <div id="bluecircle"></div>
+          <div id="bluecircle" style="top: 200px;"></div>
+          <div id="bluecircle" style="top: 250px;"></div>
           <div id="goldcircle"></div>
-          <div id="goldcircle"></div>
-          <div id="goldcircle"></div>
-          <div id="line"></div>
-          <div id="line"></div>
+          <div id="goldcircle" style="top: 200px"></div>
+          <div id="goldcircle" style="top: 250px;"></div>
+          <div id="line1"></div>
+          <div id="line2"></div>
         </div>
-        <div id="yellow cards"> </div>
+        <div id="yellowcards"> 
+          <div id="tacocat">TACO<br>CAT<br>GOAT<br>CHEESE<br>PIZZA</div>
+          <div id="cardbar1" class="bar"></div>
+          <div id="cardbar2" class="bar"></div>
+          <div id="cardbar3" class="bar"></div>
+        </div>
     </div> <!-- END CSS STILL LIFE -->
 </body>
 

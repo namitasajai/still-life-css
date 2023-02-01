@@ -1,9 +1,10 @@
 <!DOCTYPE html> 
-<header> 
-  
-</header>
+<head> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
 <style> 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Teko);
 #wrapper {
   position: relative;
   width: 1000px;
@@ -40,7 +41,7 @@
   background-size: 100%; 
   position: absolute; 
 }
-
+/* PORK ROLL */
 #porkroll {
   width: 250px; 
   height: 250px; 
@@ -48,8 +49,11 @@
   border-left: 5px solid rgb(187, 63, 63);
   border-top: 5px solid rgb(187, 63, 63);    
   position: absolute; 
+  transform: rotate(30deg);
+  bottom: -80px; 
+  left: 200px; 
 }
-#title {
+#porkroll #title {
   width: 130px; 
   height: 60px;
   display: inline-block;
@@ -57,22 +61,68 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border: 6px solid rgb(54, 51, 51); 
-  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
   text-align: center;
   color:rgb(232, 84, 84);
   font-size: 44px;
   letter-spacing: -2px;
   position: absolute; 
   top: 10px; 
-  left: 15px;
+  left: 22px;
   line-height: 60px;
 }
-#title #text {
-  transform: scale(1,3);
-  -webkit-transform: scale(1,3);
-  -moz-transform: scale(1,3);
-  -o-transform: scale(1,3);
-  transform-origin: 0% 70%;
+#porkroll #itemtitle {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  position: absolute; 
+  font-size: 30px; 
+  color:rgb(232, 84, 84);
+  left: 40px; 
+  top: 110px; 
+  letter-spacing: 1px;
+
+}
+#porkroll #bluecircle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 212, 239, 0.604);
+  background-color: transparent;
+  position: absolute; 
+  top: 85px;
+  left: 105px; 
+}
+#porkroll #bluecircle #text {
+  top: 7px; 
+  margin-left: 1px; 
+  margin-right: 1px; 
+  position: absolute; 
+  line-height: 3.9px;
+  font-size: 2.5px; 
+  color: rgba(124, 212, 239, 0.604);
+  font-family: 'Arial Narrow', Helvetica, sans-serif; 
+  text-align: center;
+}
+#porkroll #ingredients {
+  height: 30px; 
+  width: 90px; 
+  color: rgba(104, 192, 219, 0.73);
+  font-family: 'Arial Narrow', Helvetica, sans-serif;
+  font-size: 6px; 
+  text-align: center; 
+  position: absolute;
+  top: 146px; 
+  left: 75px; 
+}
+#porkroll #weight {
+  height: 30px; 
+  width: 180px; 
+  color: rgba(9, 33, 77, 0.797);
+  font-family: 'Arial Narrow', Helvetica, sans-serif;
+  font-size: 10px; 
+  text-align: center; 
+  position: absolute;
+  top: 183px; 
+  left: 37px; 
 }
 .bar {
   width: 8px; 
@@ -80,7 +130,7 @@
   background-color: rgb(54, 51, 51);
   position: absolute;
   top: 20px; 
-  left: 160px; 
+  left: 168px; 
 }
 #bar1 {
   transform: rotate(10deg);
@@ -101,6 +151,26 @@
   margin-left: 30px; 
   margin-top: 28px; 
 }
+.smallbar {
+  width: 7px; 
+  height: 13px; 
+  background-color: rgb(54, 51, 51);
+  position: absolute;
+  top: 30px; 
+  left: 10px; 
+}
+#smallbar1 {
+  transform: rotate(-28deg);
+}
+#smallbar2 {
+  top: 36px;
+  transform: rotate(-90deg);
+  height: 17px;
+}
+#smallbar3 {
+  top: 46px;
+  transform: rotate(-152deg);
+}
 #circle {
   width: 220px;
   height: 220px;
@@ -110,7 +180,60 @@
   top: 30px;
   left: 15px; 
 }
+
+#whitebook {
+  width: 220px; 
+  height: 350px; 
+  background-color:rgb(255, 244, 227);
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+}
+#redtext {
+  width: 200px; 
+  height: 40px; 
+  position: absolute;
+  top: 20px; 
+  left: 30px; 
+  font-family: Teko; 
+  font-size: 25px;
+  color:rgb(232, 84, 84);
+}
+#titletext {
+  width: 200px; 
+  height: 50px; 
+  position: absolute;
+  top: 60px; 
+  left: 10px; 
+  font-family: Teko; 
+  font-size: 50px;
+  text-align: center;
+  line-height: 40px;
+  color:rgb(54, 51, 51);
+  font-style: bold;
+}
+
+#author {
+  width: 200px; 
+  height: 40px; 
+  position: absolute;
+  bottom: 1px; 
+  left: 34px; 
+  font-family: Teko; 
+  font-size: 27px;
+  color:rgb(54, 51, 51);
+}
+#bluecircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(141, 149, 210);
+  position: absolute; 
+  top: 140px;
+  left: 30px; 
+}
 </style>
+</head>
 <body>
     <div id="wrapper"> <!-- START CSS STILL LIFE - All HTML should be contained within this wrapper -->
         <div id="mainbag"> 
@@ -123,13 +246,35 @@
           <div id="title">
             <b id="text">Taylor</b>
           </div>
+          <span id="itemtitle">PORK ROLL</span>
+          <div id="bluecircle">
+            <div id="text"style="top: 2px; left: 9px; font-size: 4px"> <b>US</b></div>
+            <div id="text">INSPECTED & PASSED BY DEPARTMENT OF AGRICULTURE <b>EST. 256</b></div>
+          </div>
+          <div id="ingredients">INGREDIENTS: PORK, SALT, SUGAR, SPICES, LACTIC ACID STARTER CULTURE, SODIUM ASCORBATE, SODIUM NITRITE, SODIUM NITRATE.</div>
+          <div id="weight"><b>NET WT. 6 OZ. &nbsp;&nbsp; APPROXIMATELY 8 SLICES</b></div>
+          <div id="smallbar1" class="smallbar"></div> 
+          <div id="smallbar2" class="smallbar"></div> 
+          <div id="smallbar3" class="smallbar"></div> 
           <div id="bar1" class="bar"></div> 
           <div id="bar2" class="bar"></div>
           <div id="bar3" class="bar"></div>
-          <div id="bar4" class="bar"></div>
+          <div id="bar4" class="bar"></div> 
         </div>
         <div id="greenbook"> </div>
-        <div id="whitebook"> </div>
+        <div id="whitebook"> 
+          <div id="redtext">THE GREAT BESTSELLER</div>
+          <div id="titletext">GAMES PEOPLE PLAY</div>
+          <div id="author">BY ERIC BERNE, M.D.</div>
+          <div id="bluecircle"></div>
+          <div id="bluecircle"></div>
+          <div id="bluecircle"></div>
+          <div id="goldcircle"></div>
+          <div id="goldcircle"></div>
+          <div id="goldcircle"></div>
+          <div id="line"></div>
+          <div id="line"></div>
+        </div>
         <div id="yellow cards"> </div>
     </div> <!-- END CSS STILL LIFE -->
 </body>

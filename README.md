@@ -1,3 +1,2 @@
-#This is my drawing :)
-hope u like
+**This is my drawing** :)
 ![alt text](StillLifeScreenshot.png "Still Life")

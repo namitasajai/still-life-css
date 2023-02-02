@@ -1,0 +1,726 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Teko&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Poppins&display=swap);
+
+#wrapper {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: rgb(138, 168, 224);
+    overflow: hidden;
+}
+
+#mainbag {
+    width: 900px;
+    height: 800px;
+    background: rgb(239, 176, 176);
+    transform: rotate(-60deg);
+    position: absolute;
+    top: -80px;
+    left: 150px;
+    border-radius: 10px;
+    background-image: radial-gradient(rgb(119, 90, 43) 40%, transparent 40%);
+    background-size: 20px 20px;
+}
+
+#band {
+    width: 100px;
+    height: 700px;
+    background: rgb(202, 178, 139);
+}
+
+#cd {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(158, 149, 149, 0.649);
+    background-image: radial-gradient(transparent 20%, rgba(158, 149, 149, 0.649) 21%, rgb(206, 203, 203) 21%, rgba(158, 149, 149, 0.649) 26%, white 26%);
+    background-size: 100%;
+    position: absolute;
+}
+
+#cdoverlay {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(136, 123, 123, 0.649);
+    background-image: radial-gradient(transparent 14%, rgba(228, 222, 222, 0.921) 14% 21%, transparent 20% 100%);
+    background-size: 100%;
+    position: absolute;
+}
+
+#cdshape {
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 50%;
+    background-image: radial-gradient(transparent 20%, rgba(217, 206, 206, 0.649) 21%, rgb(206, 203, 203) 21%, rgba(158, 149, 149, 0.649) 26%, rgb(206, 203, 203) 26%);
+    border: 1px solid rgba(212, 198, 198, 0.649);
+}
+
+#cdhole {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    margin: 40%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#cdshape2 {
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 50%;
+    background-image: conic-gradient(white, white, white,
+            rgb(183, 178, 178), rgb(183, 178, 178),
+            rgb(247, 137, 247),
+            rgb(165, 212, 228),
+            aqua,
+            rgb(189, 237, 189),
+            rgb(241, 241, 156),
+            rgb(241, 192, 100),
+            rgb(242, 98, 98),
+            rgb(183, 178, 178), rgb(183, 178, 178),
+            white, white, white, white,
+            rgb(183, 178, 178), rgb(183, 178, 178),
+            rgb(247, 137, 247),
+            rgb(165, 212, 228),
+            aqua, rgb(189, 237, 189), rgb(241, 241, 156), rgb(241, 192, 100),
+            rgb(242, 98, 98),
+            rgb(183, 178, 178), rgb(183, 178, 178), white);
+    border: 1px solid rgba(212, 198, 198, 0.649);
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#cdhole2 {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    margin: 40%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.cd {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    background: conic-gradient(white, white, white,
+            grey, grey,
+            violet,
+            deepskyblue,
+            aqua,
+            palegreen,
+            yellow,
+            orange,
+            red,
+            grey, grey,
+            white, white, white, white,
+            grey, grey,
+            violet,
+            deepskyblue,
+            aqua, palegreen, yellow, orange,
+            red,
+            grey, grey, white);
+}
+
+/* PORK ROLL */
+#porkroll {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(232, 84, 84);
+    border-left: 5px solid rgb(187, 63, 63);
+    border-top: 5px solid rgb(187, 63, 63);
+    position: absolute;
+    transform: rotate(30deg);
+    bottom: -80px;
+    left: 200px;
+}
+
+#porkroll #title {
+    width: 130px;
+    height: 60px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 6px solid rgb(54, 51, 51);
+    font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: rgb(232, 84, 84);
+    font-size: 44px;
+    letter-spacing: -2px;
+    position: absolute;
+    top: 10px;
+    left: 22px;
+    line-height: 60px;
+}
+
+#porkroll #itemtitle {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 30px;
+    color: rgb(232, 84, 84);
+    left: 40px;
+    top: 110px;
+    letter-spacing: 1px;
+
+}
+
+#porkroll #bluecircle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid rgba(124, 212, 239, 0.604);
+    background-color: transparent;
+    position: absolute;
+    top: 85px;
+    left: 105px;
+}
+
+#porkroll #bluecircle #text {
+    top: 7px;
+    margin-left: 1px;
+    margin-right: 1px;
+    position: absolute;
+    line-height: 3.9px;
+    font-size: 2.5px;
+    color: rgba(124, 212, 239, 0.604);
+    font-family: 'Arial Narrow', Helvetica, sans-serif;
+    text-align: center;
+}
+
+#porkroll #ingredients {
+    height: 30px;
+    width: 90px;
+    color: rgba(104, 192, 219, 0.73);
+    font-family: 'Arial Narrow', Helvetica, sans-serif;
+    font-size: 6px;
+    text-align: center;
+    position: absolute;
+    top: 146px;
+    left: 75px;
+}
+
+#porkroll #weight {
+    height: 30px;
+    width: 180px;
+    color: rgba(9, 33, 77, 0.797);
+    font-family: 'Arial Narrow', Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    top: 183px;
+    left: 37px;
+}
+
+.bar {
+    width: 8px;
+    height: 80px;
+    background-color: rgb(54, 51, 51);
+    position: absolute;
+    top: 20px;
+    left: 168px;
+}
+
+#bar1 {
+    transform: rotate(10deg);
+    margin-left: 0px;
+}
+
+#bar2 {
+    transform: rotate(18deg);
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+#bar3 {
+    transform: rotate(23deg);
+    margin-left: 20px;
+    margin-top: 18px;
+}
+
+#bar4 {
+    transform: rotate(35deg);
+    margin-left: 30px;
+    margin-top: 28px;
+}
+
+.smallbar {
+    width: 7px;
+    height: 13px;
+    background-color: rgb(54, 51, 51);
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
+#smallbar1 {
+    transform: rotate(-28deg);
+}
+
+#smallbar2 {
+    top: 36px;
+    transform: rotate(-90deg);
+    height: 17px;
+}
+
+#smallbar3 {
+    top: 46px;
+    transform: rotate(-152deg);
+}
+
+#circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+
+#greenbook {
+    width: 320px;
+    height: 350px;
+    border-left: 9px solid rgb(22, 65, 30);
+    background-color: rgb(35, 95, 45);
+    position: absolute;
+    top: 125px;
+    right: 50px;
+    transform: rotate(-50deg);
+}
+
+#greenbook #whitetitle {
+    font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
+    text-align: left;
+    width: 220px;
+    height: 200px;
+    line-height: 50px;
+    font-size: 36px;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    color: rgba(255, 255, 255, 0.992);
+}
+
+#barcode {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Libre Barcode 128 Text', Helvetica;
+    font-size: 20px;
+    color: white;
+    height: 100%;
+    display: table-cell;
+}
+
+#barcode:hover .laser {
+    width: 60px;
+    margin-left: -18%;
+    background-color: rgba(230, 88, 45, 0.823);
+    height: 1px;
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+    box-shadow: 0 0 4px rgb(230, 10, 10);
+    animation: scanning 2s infinite;
+}
+
+#barcode:hover .diode {
+    animation: beam .01s infinite;
+}
+
+@keyframes beam {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes scanning {
+    50% {
+        transform: translateY(36px);
+    }
+}
+
+#whitebook {
+    width: 220px;
+    height: 350px;
+    border-left: 10px solid rgb(192, 176, 151);
+    border-top: 3px solid rgb(219, 204, 180);
+    background-color: rgb(255, 244, 227);
+    position: absolute;
+    top: 125px;
+    right: -5px;
+    transform: rotate(-30deg);
+    cursor: pointer;
+}
+
+#bookid {
+    font-size: 6pt;
+    font-family: 'Arial Narrow', sans-serif;
+    font-style: bold;
+    text-align: right;
+    margin: 9px;
+}
+
+#redtext {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-family: Teko;
+    font-size: 25px;
+    color: rgb(232, 84, 84);
+}
+
+#titletext {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    font-family: Teko;
+    font-size: 50px;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(54, 51, 51);
+    font-style: bold;
+}
+
+
+#author {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    bottom: 1px;
+    left: 34px;
+    font-family: Teko;
+    font-size: 27px;
+    color: rgb(54, 51, 51);
+}
+
+#bluecircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgb(141, 149, 210);
+    position: absolute;
+    top: 150px;
+    left: 35px;
+}
+
+#goldcircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgb(233, 183, 76);
+    position: absolute;
+    top: 150px;
+    right: 35px;
+}
+
+#line1 {
+    width: 1.5px;
+    height: 189px;
+    background-color: rgb(54, 51, 51, 0.9);
+    top: 128px;
+    left: 108px;
+    transform: rotate(-47deg);
+    position: absolute;
+}
+
+#line2 {
+    width: 1.5px;
+    height: 150px;
+    background-color: rgba(54, 51, 51, 0.9);
+    top: 147px;
+    left: 109px;
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+#vert1 {
+    position: absolute;
+    left: 80px;
+    top: 150px;
+    width: 7px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+#vert2 {
+    position: absolute;
+    left: 130px;
+    top: 150px;
+    width: 7px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+#horiz1 {
+    position: absolute;
+    left: 105px;
+    top: 120px;
+    height: 140px;
+    width: 7px;
+    border-radius: 10px;
+    transform: rotate(90deg);
+}
+
+#horiz2 {
+    position: absolute;
+    left: 105px;
+    top: 170px;
+    height: 140px;
+    width: 7px;
+    border-radius: 10px;
+    transform: rotate(90deg);
+}
+
+#tic {
+    display: none;
+    width: 37px;
+    height: 37px;
+    background-image: radial-gradient(transparent 46%, rgb(117, 146, 227) 46%);
+    border-radius: 50%;
+    position: absolute;
+    top: 197px;
+    left: 90px;
+}
+
+#tac {
+    display: none;
+    background-color: rgb(232, 84, 84);
+    position: absolute;
+    left: 58px;
+    top: 147px;
+    width: 6px;
+    height: 37px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+}
+
+#toe {
+    display: none;
+    background-color: rgb(232, 84, 84);
+    position: absolute;
+    left: 58px;
+    top: 147px;
+    width: 6px;
+    height: 37px;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+}
+
+.game2 {
+    display: none;
+}
+
+#whitebook:focus .game1 {
+    display: none;
+}
+
+#whitebook:focus .game2 {
+    display: block;
+}
+
+.game2:hover #tic,
+.game2:hover #tac,
+.game2:hover #toe {
+    display: block;
+}
+
+#yellowcards {
+    width: 160px;
+    height: 220px;
+    top: -110px;
+    right: 200px;
+    position: absolute;
+    border-top: 5px solid rgb(180, 175, 86);
+    border-left: 2px solid rgb(200, 194, 86);
+    transform: rotate(-110deg);
+    background-color: rgb(246, 239, 103);
+    color: rgb(54, 51, 51);
+}
+
+#tacocat {
+    font-family: "Poppins", Helvetica, Sans-serif;
+    letter-spacing: 2px;
+    text-align: left;
+    line-height: 18px;
+    font-style: bold;
+    color: #0000;
+    background:
+        linear-gradient(-90deg, rgb(54, 51, 51) 5px, #0000 0) 10px 0,
+        linear-gradient(rgb(54, 51, 51) 0 0) 0 0;
+    background-size: calc(var(--n)*2ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation:
+        b .7s infinite steps(1),
+        t calc(var(--n)*.3s) steps(var(--n)) forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes t {
+    from {
+        background-size: 0 200%
+    }
+}
+
+@keyframes b {
+    50% {
+        background-position: 0 -100%, 0 0
+    }
+}
+
+#cardbar1 {
+    left: 17px;
+    top: 140px;
+    background: linear-gradient(to top, rgb(54, 51, 51), rgb(54, 51, 51)) no-repeat 0 0;
+    background-size: 10px;
+    transition: 2s;
+    width: 8px;
+    height: 80px;
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+#cardbar2 {
+    left: 35px;
+    top: 120px;
+    background: linear-gradient(to top, rgb(54, 51, 51), rgb(54, 51, 51)) no-repeat 0 0;
+    background-size: 10px;
+    transition: 2s;
+    width: 8px;
+    height: 100px;
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+#cardbar3 {
+    left: 53px;
+    top: 140px;
+    background: linear-gradient(to top, rgb(54, 51, 51), rgb(54, 51, 51)) no-repeat 0 0;
+    background-size: 10px;
+    transition: 2s;
+    width: 8px;
+    height: 80px;
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+#yellowcards:hover #cardbar1,
+#yellowcards:hover #cardbar2,
+#yellowcards:hover #cardbar3 {
+    animation: animate 5s linear infinite;
+    background-size: 10px 20%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    20% {
+        background-size: 10px 0%;
+    }
+
+    50% {
+        background-size: 10px 100%;
+    }
+
+    20% {
+        background-size: 10px 0%;
+    }
+}
+
+#triangle1 {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 300px solid rgb(122, 155, 237);
+    position: absolute;
+    right: 180px;
+    bottom: -80px;
+    transform: rotate(-60deg);
+}
+
+#triangle1:hover {
+    animation: rotateTriangle 1s linear .2s 3 alternate-reverse;
+}
+
+#triangle2:hover {
+    animation: rotateTriangle2 1s linear .2s 3 alternate-reverse;
+}
+
+@keyframes rotateTriangle {
+    from {
+        transform: rotate(-60deg);
+    }
+
+    to {
+        transform: rotate(-80deg);
+    }
+}
+
+@keyframes rotateTriangle2 {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(-65deg);
+    }
+}
+
+#triangle2 {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 300px solid rgb(170, 186, 239);
+    position: absolute;
+    right: 90px;
+    bottom: -60px;
+    transform: rotate(-45deg);
+}
+
+#triangle3 {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 300px solid rgb(239, 105, 64);
+    position: absolute;
+    transform: rotate(125deg);
+}

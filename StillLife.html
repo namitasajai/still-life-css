@@ -24,7 +24,7 @@
       transform: rotate(-60deg);
       position: absolute;
       top: -80px;
-      left: 200px;
+      left: 150px;
       border-radius: 10px;
       background-image: radial-gradient(rgb(119, 90, 43) 40%, transparent 40%);
       background-size: 20px 20px;
@@ -105,6 +105,20 @@
           rgb(242, 98, 98),
           rgb(183, 178, 178), rgb(183, 178, 178), white);
       border: 1px solid rgba(212, 198, 198, 0.649);
+      animation-name: rotate;
+      animation-duration: 10s;
+      animation-delay: 2s; 
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(-360deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     #cdhole2 {
@@ -331,6 +345,7 @@
       height: 100%;
       display: table-cell;
     }
+
     #barcode:hover .laser {
       width: 60px;
       margin-left: -18%;
@@ -369,6 +384,7 @@
       top: 125px;
       right: -5px;
       transform: rotate(-30deg);
+      cursor: pointer;
     }
 
     #bookid {
@@ -456,6 +472,97 @@
       position: absolute;
     }
 
+    #vert1 {
+      position: absolute;
+      left: 80px;
+      top: 150px;
+      width: 7px;
+      height: 135px;
+      border-radius: 10px;
+    }
+
+    #vert2 {
+      position: absolute;
+      left: 130px;
+      top: 150px;
+      width: 7px;
+      height: 135px;
+      border-radius: 10px;
+    }
+
+    #horiz1 {
+      position: absolute;
+      left: 105px;
+      top: 120px;
+      height: 140px;
+      width: 7px;
+      border-radius: 10px;
+      transform: rotate(90deg);
+    }
+
+    #horiz2 {
+      position: absolute;
+      left: 105px;
+      top: 170px;
+      height: 140px;
+      width: 7px;
+      border-radius: 10px;
+      transform: rotate(90deg);
+    }
+
+    #tic {
+      display: none;
+      width: 37px;
+      height: 37px;
+      background-image: radial-gradient(transparent 46%, rgb(117, 146, 227) 46%);
+      border-radius: 50%;
+      position: absolute;
+      top: 197px;
+      left: 90px;
+    }
+
+    #tac {
+      display: none;
+      background-color: rgb(232, 84, 84);
+      position: absolute;
+      left: 58px;
+      top: 147px;
+      width: 6px;
+      height: 37px;
+      border-radius: 10px;
+      transform: rotate(45deg);
+    }
+
+    #toe {
+      display: none;
+      background-color: rgb(232, 84, 84);
+      position: absolute;
+      left: 58px;
+      top: 147px;
+      width: 6px;
+      height: 37px;
+      border-radius: 10px;
+      transform: rotate(-45deg);
+    }
+
+    .game2 {
+      display: none;
+    }
+
+    #whitebook:focus .game1 {
+      display: none;
+    }
+
+    #whitebook:focus .game2 {
+      display: block;
+    }
+
+    .game2:hover #tic,
+    .game2:hover #tac,
+    .game2:hover #toe {
+      display: block;
+    }
+
     #yellowcards {
       width: 160px;
       height: 220px;
@@ -486,6 +593,7 @@
       animation:
         b .7s infinite steps(1),
         t calc(var(--n)*.3s) steps(var(--n)) forwards;
+      animation-iteration-count: infinite;
     }
 
     @keyframes t {
@@ -570,6 +678,32 @@
       transform: rotate(-60deg);
     }
 
+    #triangle1:hover {
+      animation: rotateTriangle 1s linear .2s 3 alternate-reverse;
+    }
+
+    #triangle2:hover {
+      animation: rotateTriangle2 1s linear .2s 3 alternate-reverse;
+    }
+
+    @keyframes rotateTriangle {
+      from {
+        transform: rotate(-60deg);
+      }
+      to {
+        transform: rotate(-80deg);
+      }
+    }
+
+    @keyframes rotateTriangle2 {
+      from {
+        transform: rotate(-45deg);
+      }
+      to {
+        transform: rotate(-65deg);
+      }
+    }
+
     #triangle2 {
       width: 0;
       height: 0;
@@ -600,7 +734,7 @@
       <div id="band">
       </div>
     </div>
-    <div id="cdcontainer" style="position: absolute; top: 50px; left: 80px;">
+    <div id="cdcontainer" style="position: absolute; top: 50px; left: 40px;">
       <div id="cd"></div>
       <div id="cdshape">
         <div id="cdhole">
@@ -641,25 +775,38 @@
       </div>
       <div id="whitetitle">Ainsworth <br> Keyboard <br> Trainer</div>
     </div>
-    <div id="whitebook">
+    <div id="whitebook" tabindex="1">
       <div id="bookid">B-186-Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1.45</div>
       <div id="redtext">THE GREAT BESTSELLER</div>
       <div id="titletext">GAMES PEOPLE PLAY</div>
       <div id="author">BY ERIC BERNE, M.D.</div>
-      <div id="bluecircle"></div>
-      <div id="bluecircle" style="top: 200px;"></div>
-      <div id="bluecircle" style="top: 250px;"></div>
-      <div id="goldcircle"></div>
-      <div id="goldcircle" style="top: 200px"></div>
-      <div id="goldcircle" style="top: 250px;"></div>
-      <div id="line1"></div>
-      <div id="line2"></div>
+      <div class="game1">
+        <div id="bluecircle"></div>
+        <div id="bluecircle" style="top: 200px;"></div>
+        <div id="bluecircle" style="top: 250px;"></div>
+        <div id="goldcircle"></div>
+        <div id="goldcircle" style="top: 200px"></div>
+        <div id="goldcircle" style="top: 250px;"></div>
+        <div id="line1"></div>
+        <div id="line2"></div>
+      </div>
+      <div class="game2">
+        <div class="grid">
+          <div id="vert1" class="bar"></div>
+          <div id="vert2" class="bar"></div>
+          <div id="horiz1" class="bar"></div>
+          <div id="horiz2" class="bar"></div>
+        </div>
+        <div id="tic"></div>
+        <div id="tac" class="bar"></div>
+        <div id="toe" class="bar"></div>
+      </div>
     </div>
     <div id="yellowcards">
       <div style="margin:15px"><span id="tacocat" style="--n:24">TACO<br>CAT<br>GOAT<br>CHEESE<br>PIZZA</span></div>
       <div id="cardbar1"></div>
-      <div id="cardbar2" class="bar"></div>
-      <div id="cardbar3" class="bar"></div>
+      <div id="cardbar2"></div>
+      <div id="cardbar3"></div>
     </div>
     <div id="triangle1"></div>
     <div id="triangle2"></div>

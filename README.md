@@ -1,6 +1,8 @@
 ---
 Still Life CSS
 ---
+![ezgif com-gif-maker-2](https://user-images.githubusercontent.com/122184153/216509529-bafd40a4-37cf-4d10-8d35-9920da1babf8.gif)
+
 ![alt text](StillLifeScreenshot.png "Still Life")
 ## Description.
 
